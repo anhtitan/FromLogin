@@ -98,7 +98,7 @@ form .forgot:hover {
     color:  #FA7268;
 }
 
-form input[type="submit"] {
+form input[type="button"] {
     cursor: pointer;
     width: 100%;
     height: 46px;
