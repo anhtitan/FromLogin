@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: linear-gradient(-45deg, #d50a7d, #2c6c9a, #46788f, #d12464);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 20 px;
+}
+ul li a{
+    display:  block;
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 18px;
+    font-family: "position", sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+ul :hover li a{
+    transform: scale(1.5);
+    opacity: .2;
+    filter:  blur(5px);
+}
+ul li a:hover{
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0px);
+}
+.loading{
+    position: absolute;
+    left: 45%;
+    top: 45%;
+}
+.loader{
+    border: 15px solid #f3f3f3;
+    border-top: 15px solid #000;
+    border-radius: 50%;
+    width: 120px;height: 120px;
+    animation: spin 0.23421s linear infinite;
+
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border: 0px solid rgb(179, 20, 20);
+    border-radius: 50%;
+    position: absolute;
+}
+.circle:nth-child(1){
+    border-bottom-width: 8px;
+    background-color: orange;
+    animation: rotate1 2s linear infinite;
+}
+.circle:nth-child(2){
+    border-right-width: 8px;
+    background-color: #2f6f9c;
+    animation: rotate2 2s linear infinite;
+}
+.circle:nth-child(3){
+    border-top-width: 8px;
+    background-color: #94e900;
+    animation: rotate3 2s linear infinite;
+}
+@keyframes rotate1 {
+    0%{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+
+}
+@keyframes rotate2 {
+    0%{
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+
+}
+@keyframes rotate3 {
+    0%{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+
+}
+.loading{
+    color: rgb(255, 255, 255);
+}
